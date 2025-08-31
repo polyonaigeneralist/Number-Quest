@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Quest - Challenge Your Mind!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 NUMBER QUEST</h1>
+        <p class="subtitle">Challenge your mind with fast-paced number puzzles!</p>
+        
+        <div class="game-header">
+            <div class="stat">
+                <div class="stat-label">Score</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Level</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Streak</div>
+                <div class="stat-value" id="streak">0</div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="timer-bar">
+                <div class="timer-fill" id="timerFill"></div>
+            </div>
+            
+            <div class="target-number" id="targetNumber">42</div>
+            <div class="challenge-text">Create this number using the cards below!</div>
+            
+            <div class="numbers-grid" id="numbersGrid"></div>
+            
+            <div class="operators">
+                <button class="operator-btn" onclick="selectOperator('+')">+</button>
+                <button class="operator-btn" onclick="selectOperator('-')">-</button>
+                <button class="operator-btn" onclick="selectOperator('*')">×</button>
+                <button class="operator-btn" onclick="selectOperator('/')">/</button>
+            </div>
+            
+            <div class="current-calculation" id="currentCalculation">Select numbers and operators to build your equation</div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="submitAnswer()">Submit Answer</button>
+                <button class="btn btn-secondary" onclick="clearCalculation()">Clear</button>
+                <button class="btn btn-success" onclick="newRound()">New Round</button>
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h3>🏆 High Scores</h3>
+            <div id="leaderboardList">
+                <div class="leaderboard-entry">
+                    <span>Math Wizard</span>
+                    <span>1250 pts</span>
+                </div>
+                <div class="leaderboard-entry">
+                    <span>Number Ninja</span>
+                    <span>980 pts</span>
+                </div>
+                <div class="leaderboard-entry">
+                    <span>Puzzle Master</span>
+                    <span>750 pts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
